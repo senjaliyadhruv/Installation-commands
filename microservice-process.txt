@@ -108,6 +108,18 @@ eksctl create cluster --name dhruv \
 
    eksctl delete cluster dhruv --region us-east-1
 
+#-------------on Amazon-Linux Jenkins --------------------------
+
+sudo dnf install java-17-amazon-corretto -y
+
+sudo curl -o /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+
+sudo dnf install jenkins -y
+
+sudo systemctl enable jenkins
+sudo systemctl start jenkins
 
 #------------------Node.js Installation------------------------
 
