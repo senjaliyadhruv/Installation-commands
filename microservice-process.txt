@@ -111,3 +111,21 @@ eksctl create cluster --name dhruv \
 
 
    eksctl delete cluster dhruv --region us-east-1
+
+
+Node.js Installation
+
+    sudo yum update  # or sudo dnf update
+    curl -sL https://rpm.nodesource.com/setup_20.x | sudo -E bash -  
+    sudo yum install -y nodejs  # or sudo dnf install -y nodejs
+
+
+
+
+
+Python virtual environment installation
+
+   sudo apt install -y python3-venv  # if not installed
+   python3 -m venv venv              # create virtual environment
+   source venv/bin/activate          # activate it
+to deactivate ----> deactivate
