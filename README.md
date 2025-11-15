@@ -463,8 +463,9 @@ kubectl edit svc argocd-server -n argocd
 ```bash
 # Get the initial admin password
 kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.password}" | base64 --decode && echo
-
-# Alternative method
+```
+#### Alternative method
+```
 kubectl get secret argocd-initial-admin-secret -n argocd -o yaml
 # Then decode the password manually:
 echo "<password-value>" | base64 --decode
