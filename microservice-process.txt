@@ -1,15 +1,6 @@
-Step 1: Setting Up Your EC2 Instance
-  -- t2.large 
 
-Step 2: Create an IAM User with Required Permissions
-IAM Policies to attach to the user:
-  -- AmazonEC2FullAccess
-  -- AmazonEKSClusterPolicy
-  -- AmazonEKSWorkerNodePolicy
-  -- AWSCloudFormationFullAccess
-  -- IAMFullAccess
 
-Step 3: Install AWS CLI, kubectl, and eksctl
+#---------------- Install AWS CLI, kubectl, and eksctl -----------------
 AWS CLI Installation:
    curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
    sudo apt install unzip
@@ -28,14 +19,8 @@ eksctl Installation:
    sudo mv /tmp/eksctl /usr/local/bin
    eksctl version
 
-Step 4: Configure AWS CLI
-  -- aws configure
-     -- Access Key
-     -- Secret Key
-     -- Default region (e.g., ap-south-1)
-     -- Output format (e.g., json)
 
-Step 5: Create EKS Cluster
+#--------------Create EKS Cluster
   1. Create EKS Cluster
    eksctl create cluster --name=EKS-1 --region=us-east-1 --zones=us-east-1a,us-east-1b --without-nodegroup
 
@@ -45,7 +30,7 @@ Step 5: Create EKS Cluster
   3. Create Node Group:
    eksctl create nodegroup --cluster=EKS-1 --region=us-east-1 --name=node2 --node-type=t3.medium --nodes=3 --nodes-min=2 --nodes-max=4 --node-volume-size=20 --ssh-access --ssh-public-key=ec2 --managed --asg-access --external-dns-access --full-ecr-access --appmesh-access --alb-ingress-access
 
-Step 6: Install Jenkins on EC2 Instance
+#---------------- Install Jenkins on EC2 Instance
    1. Install Java:
       sudo apt update
       sudo apt install openjdk-17-jdk -y
@@ -83,14 +68,6 @@ Step 7: Configure Jenkins
 
   Set Up Credentials: in manage jenkins --> credential section
 
-
-Create an IAM Role and attache it to EC2 instance    
-   `Note: create IAM user with programmatic access if your bootstrap system is outside of AWS`   
-   IAM user should have access to   
-   IAM   
-   EC2   
-   VPC    
-   CloudFormation
 
 #---------------------------kubectl install ---------------
     sudo curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.19.6/2021-01-05/bin/linux/amd64/kubectl
