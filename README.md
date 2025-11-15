@@ -443,9 +443,6 @@ kubectl create namespace argocd
 
 # Install ArgoCD
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
-
-# Wait for pods to be ready
-kubectl wait --for=condition=ready pod -l app.kubernetes.io/name=argocd-server -n argocd --timeout=300s
 ```
 
 ### Enable NodePort Access
@@ -455,8 +452,9 @@ kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "NodePort"}}'
 
 # Get the NodePort
 kubectl get svc argocd-server -n argocd
-
-# Alternative: Use kubectl edit
+```
+#### Alternative: Use kubectl edit
+```bash 
 kubectl edit svc argocd-server -n argocd
 # Change 'type: ClusterIP' to 'type: NodePort' and save
 ```
