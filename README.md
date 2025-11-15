@@ -23,7 +23,7 @@ A comprehensive collection of installation commands and setup instructions for e
 
 ---
 
-## 🛠️ AWS CLI, kubectl & eksctl Installation
+## aws-cli-kubectl--eksctl-installation
 
 ### Ubuntu
 
@@ -79,7 +79,7 @@ eksctl version
 
 ---
 
-## ☸️ EKS Cluster Setup
+## eks-cluster-setup
 
 ### Step 1: Create EKS Cluster
 ```bash
@@ -134,7 +134,7 @@ eksctl delete cluster dhruv --region us-east-1
 
 ---
 
-## 🔧 Jenkins Installation & Configuration
+## jenkins-installation--configuration
 
 ### Ubuntu
 
@@ -239,7 +239,7 @@ Go to **Manage Jenkins → Credentials** to add your credentials for:
 
 ---
 
-## 📦 Node.js Installation
+## nodejs-installation
 
 ### Amazon Linux / RHEL-based
 ```bash
@@ -275,7 +275,7 @@ npm --version
 
 ---
 
-## 🐍 Python Virtual Environment
+## python-virtual-environment
 
 ### Ubuntu
 ```bash
@@ -309,7 +309,7 @@ deactivate
 
 ---
 
-## 🏗️ Terraform Installation
+## terraform-installation
 
 ### Amazon Linux / RHEL-based
 ```bash
@@ -333,7 +333,7 @@ terraform --version
 
 ---
 
-## 🐱 Apache Tomcat
+## apache-tomcat
 
 ### Installation (Both Platforms)
 ```bash
@@ -368,7 +368,7 @@ docker run -d \
 
 ---
 
-## 📚 Maven Installation
+## maven-installation
 
 ### Amazon Linux / RHEL-based
 ```bash
@@ -385,7 +385,7 @@ mvn --version
 
 ---
 
-## ⎈ Helm Installation
+## helm-installation
 
 ### Both Platforms
 ```bash
@@ -407,7 +407,7 @@ helm version
 
 ---
 
-## 🔒 Trivy Security Scanner
+## trivy-security-scanner
 
 ### Amazon Linux / RHEL-based
 ```bash
@@ -477,7 +477,7 @@ echo "<password-value>" | base64 --decode
 
 ---
 
-## 📊 Prometheus & Grafana Monitoring
+## prometheus--grafana-monitoring
 
 ### Installation using Helm
 ```bash
@@ -532,7 +532,7 @@ kubectl get svc stable-kube-prometheus-sta-prometheus -n prometheus
 
 ---
 
-## 🔍 SonarQube Installation
+## sonarqube-installation
 
 ### Amazon Linux / RHEL-based
 ```bash
@@ -570,7 +570,7 @@ docker logs -f sonarqube
 
 ---
 
-## 📦 JFrog Artifactory
+## jfrog-artifactory
 
 ### Amazon Linux / RHEL-based
 ```bash
