@@ -129,7 +129,7 @@ eksctl create cluster \
   --node-type t2.medium
 ```
 
-# Delete cluster
+#### Delete cluster
 ```bash
 eksctl delete cluster dhruv --region us-east-1
 ```
