@@ -432,7 +432,7 @@ trivy --version
 
 ---
 
-## 🔄 ArgoCD Setup
+## argocd-setup
 
 ### Installation
 ```bash
