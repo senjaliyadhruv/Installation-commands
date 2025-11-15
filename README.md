@@ -707,4 +707,78 @@ aws eks update-kubeconfig --region us-east-1 --name <cluster-name>
 ### Jenkins not starting
 ```bash
 # Check Jenkins status
-sudo systemctl status jenkin
+sudo systemctl status jenkins
+
+# Check Jenkins logs
+sudo journalctl -u jenkins -f
+
+# Restart Jenkins
+sudo systemctl restart jenkins
+```
+
+### Docker permission denied
+```bash
+# Add user to docker group
+sudo usermod -aG docker $USER
+
+# Reload group membership
+newgrp docker
+
+# Or logout and login again
+```
+
+### kubectl connection issues
+```bash
+# Update kubeconfig
+aws eks update-kubeconfig --region <region> --name <cluster-name>
+
+# Verify connection
+kubectl cluster-info
+
+# Check kubectl config
+kubectl config view
+```
+
+### EKS Node Group not ready
+```bash
+# Check node status
+kubectl get nodes
+
+# Describe nodes for issues
+kubectl describe nodes
+
+# Check AWS console for node group status
+aws eks describe-nodegroup --cluster-name <cluster-name> --nodegroup-name <nodegroup-name> --region <region>
+```
+
+---
+
+## 📚 Useful Resources
+
+- [AWS Documentation](https://docs.aws.amazon.com/)
+- [Kubernetes Documentation](https://kubernetes.io/docs/)
+- [Jenkins Documentation](https://www.jenkins.io/doc/)
+- [Docker Documentation](https://docs.docker.com/)
+- [Terraform Documentation](https://www.terraform.io/docs/)
+- [Helm Documentation](https://helm.sh/docs/)
+- [ArgoCD Documentation](https://argo-cd.readthedocs.io/)
+- [Prometheus Documentation](https://prometheus.io/docs/)
+- [Grafana Documentation](https://grafana.com/docs/)
+
+---
+
+## 🤝 Contributing
+
+Feel free to submit issues and enhancement requests! Contributions are always welcome.
+
+### How to Contribute
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+
+**Happy DevOps! 🚀**
