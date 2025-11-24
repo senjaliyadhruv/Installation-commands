@@ -143,7 +143,7 @@ eksctl delete cluster dhruv --region us-east-1
 #### Step 1: Install Java
 ```bash
 sudo apt update
-sudo apt install openjdk-17-jdk -y
+sudo apt install openjdk-21-jdk -y
 java -version
 ```
 
