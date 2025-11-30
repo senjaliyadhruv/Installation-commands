@@ -192,7 +192,7 @@ Go to **Manage Jenkins → Credentials** to add your credentials for:
 
 #### Step 1: Install Java
 ```bash
-sudo dnf install java-17-amazon-corretto -y
+sudo dnf install java-21-amazon-corretto -y
 java -version
 ```
 
